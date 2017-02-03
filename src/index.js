@@ -1,10 +1,10 @@
 import Badge from './components/Badge.vue'
 import ProgressBar from './components/ProgressBar.vue'
 
-const components = {
+const components = [
   Badge,
   ProgressBar
-}
+]
 
 const install = (Vue, opts = {}) => {
   if (install.installed) return
