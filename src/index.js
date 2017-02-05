@@ -1,9 +1,11 @@
 import Badge from './components/Badge.vue'
 import ProgressBar from './components/ProgressBar.vue'
+import Widget from './components/Widget.vue'
 
 const components = [
   Badge,
-  ProgressBar
+  ProgressBar,
+  Widget
 ]
 
 const install = (Vue, opts = {}) => {
@@ -20,5 +22,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   Badge,
-  ProgressBar
+  ProgressBar,
+  Widget
 }
