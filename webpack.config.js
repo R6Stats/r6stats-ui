@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
 
 module.exports = {
   devtool: false,
@@ -28,17 +27,11 @@ module.exports = {
         options: {
           loaders: {
             js: 'babel-loader',
-            scss: 'vue-style-loader!css-loader!sass-loader',
-            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+            css: 'vue-style-loader!css-loader?importLoaders=1'
           },
           postcss: [
-            autoprefixer({
-              browsers: [
-                'last 2 versions',
-                'ie > 9',
-                'Firefox ESR'
-              ]
-            })
+            require('postcss-import')(),
+            require('postcss-cssnext')()
           ]
         }
       },

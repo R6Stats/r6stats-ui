@@ -24,11 +24,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .progress-bar {
-    background: #ccc;
-    border-radius: 4px;
-    height: 5px;
-  }
-</style>
